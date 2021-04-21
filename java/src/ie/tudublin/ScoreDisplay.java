@@ -8,9 +8,9 @@ public class ScoreDisplay extends PApplet
 {
 	ArrayList<Note> notes = new ArrayList<Note>();
 
-	String score = "DEFGABcd";
+	//String score = "DEFGABcd";
 	//String score = "D2E2F2G2A2B2c2d2";
-	//String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
+	String score = "DEF2F2F2EFA2A2B2AFD2E2D2D2D2";
 
 	public void loadScore()
 	{
@@ -55,8 +55,7 @@ public class ScoreDisplay extends PApplet
 		}
 	}
 
-	private boolean isEnd = false;
-	private int whichTask = -1;
+	private String noteLetter;
 	private int noteHeight;
 
 	private float border = 200;
@@ -118,8 +117,10 @@ public class ScoreDisplay extends PApplet
 			}
 
 			//draw note letters
-			// textAlign(CENTER, CENTER);
-			// text(str, x, y);
+			textAlign(LEFT, CENTER);
+			textSize(20);
+			noteLetter = String.valueOf(letter);;
+			text(noteLetter, x1, border - 80);
 			
 			
 

@@ -65,12 +65,6 @@ public class ScoreDisplay extends PApplet
 
 	void displayScore()
 	{
-		
-		textSize(14);
-		textAlign(LEFT,CENTER);
-		
-		
-		textAlign(CENTER, CENTER);
 		strokeWeight(2);
 		stroke(0);
 		
@@ -121,13 +115,6 @@ public class ScoreDisplay extends PApplet
 			textSize(20);
 			noteLetter = String.valueOf(letter);;
 			text(noteLetter, x1, border - 80);
-			
-			
-
-			
-
-			
-		
 		}
 
 	}

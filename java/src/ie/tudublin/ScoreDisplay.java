@@ -14,7 +14,7 @@ public class ScoreDisplay extends PApplet
 
 	public void loadScore()
 	{
-
+		//iterate over the string
 		for(int i = 0 ; i <= (score.length()-1); i++)
 		{
 			
@@ -23,6 +23,7 @@ public class ScoreDisplay extends PApplet
 			char letter = c;
 			char check = c;
 
+			//check is string iteration has reached last letter
 			if(i >= (score.length()-1))
 			{
 				check = c;
@@ -31,7 +32,7 @@ public class ScoreDisplay extends PApplet
 				check = score.charAt(i+1);
 			}
 			
-
+			//check if character is letter or number then create Note object and add to the array
 			if(Character.isDigit(check)){
 				number = check - '0';
 				i++;
@@ -45,6 +46,7 @@ public class ScoreDisplay extends PApplet
 		}
 	}
 	
+	//print array
 	public void printScore()
 	{
 		for(Note n:notes)

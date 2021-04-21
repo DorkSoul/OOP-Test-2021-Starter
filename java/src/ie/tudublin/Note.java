@@ -28,6 +28,9 @@ public class Note {
     //overriding default toString method
     @Override
     public String toString() {
-        return "Score [Note=" + note + ", Duration=" + duration + "]";
+        if(duration == 1)
+        return note + "     " + duration + "     Quaver";
+        else
+        return note + "     " + duration + "     Crotchet";
     }
 }
